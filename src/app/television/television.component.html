@@ -20,17 +20,22 @@
       </div>
     </div>
 
-    <div class="video-playlist" *ngIf="videos.length > 0">
-      <h3>Video Playlist</h3>
-      <div class="video-list">
-        <div class="video-item"
-             *ngFor="let video of videos"
-             [class.active]="selectedVideo?.id === video.id"
-             (click)="selectVideo(video)">
-          <img [src]="video.thumbnail" [alt]="video.title" class="video-thumbnail" />
-          <div class="video-info">
-            <h4>{{ video.title }}</h4>
-            <p>{{ video.description }}</p>
+    <div class="playlists-sidebar" *ngIf="playlists.length > 0">
+      <div class="video-playlist" *ngFor="let playlist of playlists">
+        <h3>{{ playlist.name }}</h3>
+        <div class="video-list">
+          <div class="video-item"
+               *ngFor="let video of playlist.videos"
+               [class.active]="selectedVideo?.id === video.id"
+               (click)="selectVideo(video)">
+            <img [src]="video.thumbnail"
+                 [alt]="video.title"
+                 class="video-thumbnail"
+                 (error)="onThumbnailError($event, video.youtubeId)" />
+            <div class="video-info">
+              <h4>{{ video.title }}</h4>
+              <p>{{ video.description }}</p>
+            </div>
           </div>
         </div>
       </div>

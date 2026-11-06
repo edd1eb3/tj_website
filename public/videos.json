@@ -1,53 +1,84 @@
 {
-  "videos": [
+  "playlists": [
     {
-      "id": 1,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 1",
-      "youtubeId": "vzee23gABRA",
-      "thumbnail": "https://img.youtube.com/vi/vzee23gABRA/maxresdefault.jpg"
+      "name": "Backroads to Bridge Street",
+      "videos": [
+        {
+          "id": 1,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 1",
+          "youtubeId": "vzee23gABRA",
+          "thumbnail": "https://img.youtube.com/vi/vzee23gABRA/hqdefault.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 2",
+          "youtubeId": "55WHlmfzdfs",
+          "thumbnail": "https://img.youtube.com/vi/55WHlmfzdfs/hqdefault.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 3",
+          "youtubeId": "A_uUR0FlLMs",
+          "thumbnail": "https://img.youtube.com/vi/A_uUR0FlLMs/hqdefault.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 4",
+          "youtubeId": "a10Cjsl1OZ4",
+          "thumbnail": "https://img.youtube.com/vi/a10Cjsl1OZ4/hqdefault.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 5",
+          "youtubeId": "Yb_5klMOWec",
+          "thumbnail": "https://img.youtube.com/vi/Yb_5klMOWec/hqdefault.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 6",
+          "youtubeId": "48k1tt22ro8",
+          "thumbnail": "https://img.youtube.com/vi/48k1tt22ro8/hqdefault.jpg"
+        },
+        {
+          "id": 7,
+          "title": "Backroads to Bridge Street with Tom & Jerry",
+          "description": "Backroads to Bridge Street, Episode 7",
+          "youtubeId": "PrvkXc-Bgq0",
+          "thumbnail": "https://img.youtube.com/vi/PrvkXc-Bgq0/hqdefault.jpg"
+        }
+      ]
     },
     {
-      "id": 2,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 2",
-      "youtubeId": "55WHlmfzdfs",
-      "thumbnail": "https://img.youtube.com/vi/55WHlmfzdfs/maxresdefault.jpg"
-    },
-    {
-      "id": 3,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 3",
-      "youtubeId": "A_uUR0FlLMs",
-      "thumbnail": "https://img.youtube.com/vi/A_uUR0FlLMs/maxresdefault.jpg"
-    },
-    {
-      "id": 4,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 4",
-      "youtubeId": "a10Cjsl1OZ4",
-      "thumbnail": "https://img.youtube.com/vi/a10Cjsl1OZ4/maxresdefault.jpg"
-    },
-    {
-      "id": 5,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 5",
-      "youtubeId": "Yb_5klMOWec",
-      "thumbnail": "https://img.youtube.com/vi/Yb_5klMOWec/maxresdefault.jpg"
-    },
-    {
-      "id": 6,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 6",
-      "youtubeId": "48k1tt22ro8",
-      "thumbnail": "https://img.youtube.com/vi/48k1tt22ro8/maxresdefault.jpg"
-    },
-    {
-      "id": 7,
-      "title": "Backroads to Bridge Street with Tom & Jerry",
-      "description": "Backroads to Bridge Street, Episode 7",
-      "youtubeId": "PrvkXc-Bgq0",
-      "thumbnail": "https://img.youtube.com/vi/PrvkXc-Bgq0/maxresdefault.jpg"
+      "name": "Striking Silver Archive",
+      "videos": [
+        {
+          "id": 101,
+          "title": "Striking Silver: NY Rangers Pregame",
+          "description": "Striking Silver 1",
+          "youtubeId": "OX9HUVRiOTA",
+          "thumbnail": "https://img.youtube.com/vi/OX9HUVRiOTA/hqdefault.jpg"
+        },
+        {
+          "id": 102,
+          "title": "Striking Silver: CSTV Interview",
+          "description": "Striking Silver 2",
+          "youtubeId": "4TnFx_l8EYA",
+          "thumbnail": "https://img.youtube.com/vi/4TnFx_l8EYA/hqdefault.jpg"
+        },
+        {
+          "id": 103,
+          "title": "Striking Silver: NECN Boston",
+          "description": "Striking Silver 3",
+          "youtubeId": "m7EFDUGntR0",
+          "thumbnail": "https://img.youtube.com/vi/m7EFDUGntR0/hqdefault.jpg"
+        }
+      ]
     }
   ]
 }

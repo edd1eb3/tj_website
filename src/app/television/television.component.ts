@@ -10,8 +10,13 @@ interface Video {
   thumbnail: string;
 }
 
-interface VideoResponse {
+interface Playlist {
+  name: string;
   videos: Video[];
+}
+
+interface VideoResponse {
+  playlists: Playlist[];
 }
 
 @Component({
@@ -21,12 +26,12 @@ interface VideoResponse {
   styleUrl: './television.component.css'
 })
 export class TelevisionComponent implements OnInit {
-  videos: Video[] = [];
+  playlists: Playlist[] = [];
   selectedVideo: Video | null = null;
   loading: boolean = true;
   error: string = '';
 
-  constructor(private http: HttpClient, private sanitizer: DomSanitizer) {}
+  constructor(private http: HttpClient, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
     this.loadVideos();
@@ -35,14 +40,13 @@ export class TelevisionComponent implements OnInit {
   loadVideos(): void {
     this.loading = true;
     this.error = '';
-    
+
     this.http.get<VideoResponse>('videos.json')
       .subscribe(
         (data: VideoResponse) => {
-          console.log('Videos loaded successfully:', data);
-          this.videos = data.videos;
-          if (this.videos.length > 0) {
-            this.selectedVideo = this.videos[0];
+          this.playlists = data.playlists;
+          if (this.playlists.length > 0 && this.playlists[0].videos.length > 0) {
+            this.selectedVideo = this.playlists[0].videos[0];
           }
           this.loading = false;
         },
@@ -60,5 +64,10 @@ export class TelevisionComponent implements OnInit {
 
   getYoutubeEmbedUrl(youtubeId: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(`https://www.youtube.com/embed/${youtubeId}`);
+  }
+
+  onThumbnailError(event: Event, youtubeId: string): void {
+    const imgElement = event.target as HTMLImageElement;
+    imgElement.src = `https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`;
   }
 }
