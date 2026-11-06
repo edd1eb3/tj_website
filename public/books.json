@@ -1,0 +1,41 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "STRIKING SILVER: The Untold Story of America's Forgotten Hockey Team",
+      "image": "images/books/striking_silver.jpg",
+      "publisher": "Sports Publishing",
+      "publicationDate": "February 1, 2006",
+      "isbn10": "1596700785",
+      "isbn13": "978-1596700789"
+    },
+    {
+      "id": 2,
+      "title": "BOYCOTT: Stolen Dreams of the 1980 Moscow Olympic Games",
+      "image": "images/books/boycott.jpg",
+      "publisher": "New Chapter Press",
+      "publicationDate": "May 1, 2008",
+      "isbn10": "978-0942257557",
+      "isbn13": "978-0942257557"
+    },
+    {
+      "id": 3,
+      "title": "Ice Breakers",
+      "image": "images/books/ice_breakers.jpg",
+      "publisher": "becker&mayer! kids",
+      "publicationDate": "June 3, 2025",
+      "isbn10": "978-0760395707",
+      "isbn13": "978-0760395707"
+
+    },
+    {
+      "id": 4,
+      "title": "Sometimes You Have to Cross When it Says Don't Walk",
+      "image": "images/books/believe_it.jpg",
+      "publisher": "Triumph Books",
+      "publicationDate": "March 9, 2027",
+      "isbn10": "979-8898550295",
+      "isbn13": "979-8898550295"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<div class="television-container">
+  <h1>Television</h1>
+
+  <div *ngIf="loading" class="loading">Loading videos...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div class="video-content" *ngIf="!loading">
+    <div class="main-video-section" *ngIf="selectedVideo">
+      <div class="video-player">
+        <iframe [src]="getYoutubeEmbedUrl(selectedVideo.youtubeId)"
+                width="100%"
+                height="500"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+      </div>
+      <div class="video-details">
+        <h2>{{ selectedVideo.title }}</h2>
+        <p>{{ selectedVideo.description }}</p>
+      </div>
+    </div>
+
+    <div class="video-playlist" *ngIf="videos.length > 0">
+      <h3>Video Playlist</h3>
+      <div class="video-list">
+        <div class="video-item"
+             *ngFor="let video of videos"
+             [class.active]="selectedVideo?.id === video.id"
+             (click)="selectVideo(video)">
+          <img [src]="video.thumbnail" [alt]="video.title" class="video-thumbnail" />
+          <div class="video-info">
+            <h4>{{ video.title }}</h4>
+            <p>{{ video.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

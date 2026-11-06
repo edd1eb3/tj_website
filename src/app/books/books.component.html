@@ -1,0 +1,58 @@
+<div class="books-container">
+  <h1>Our Books</h1>
+
+  <div *ngIf="loading" class="loading">Loading books...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <div class="books-list" *ngIf="!loading && books.length > 0">
+    <div class="book-card" *ngFor="let book of books" (click)="selectBook(book)">
+      <div class="book-image">
+        <img [src]="book.image" [alt]="book.title" />
+      </div>
+      <div class="book-info">
+        <h3>{{ book.title }}</h3>
+        <p class="publisher">{{ book.publisher }}</p>
+        <p class="publication-date">{{ book.publicationDate }}</p>
+        <p class="synopsis">{{ book.synopsis }}</p>
+        <p class="isbn10">ISBN-10: {{ book.isbn10 }}</p>
+        <p class="isbn13">ISBN-13: {{ book.isbn13 }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book Details Modal -->
+  <div class="modal-overlay" *ngIf="selectedBook" (click)="closeDetails()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-btn" (click)="closeDetails()">✕</button>
+      
+      <div class="modal-body">
+        <div class="modal-image">
+          <img [src]="selectedBook.image" [alt]="selectedBook.title" />
+        </div>
+        
+        <div class="modal-details">
+          <h2>{{ selectedBook.title }}</h2>
+          
+          <div class="book-metadata">
+            <div class="metadata-item">
+              <strong>Publisher:</strong>
+              <span>{{ selectedBook.publisher }}</span>
+            </div>
+            <div class="metadata-item">
+              <strong>Publication Date:</strong>
+              <span>{{ selectedBook.publicationDate }}</span>
+            </div>
+            <div class="metadata-item">
+              <strong>ISBN-10:</strong>
+              <span>{{ selectedBook.isbn10 }}</span>
+            </div>
+            <div class="metadata-item">
+              <strong>ISBN-13:</strong>
+              <span>{{ selectedBook.isbn13 }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
