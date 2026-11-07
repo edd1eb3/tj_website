@@ -5,11 +5,12 @@ interface Book {
   id: number;
   title: string;
   image: string;
-  synopsis: string;
+  synopsis?: string;
   publisher: string;
   publicationDate: string;
   isbn10: string;
   isbn13: string;
+  purchaseLink?: string;
 }
 
 interface BooksResponse {
@@ -28,7 +29,7 @@ export class BooksComponent implements OnInit {
   loading: boolean = true;
   error: string = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.loadBooks();
@@ -37,7 +38,7 @@ export class BooksComponent implements OnInit {
   loadBooks(): void {
     this.loading = true;
     this.error = '';
-    
+
     this.http.get<BooksResponse>('books.json').subscribe(
       (data: BooksResponse) => {
         console.log('Books loaded successfully:', data);

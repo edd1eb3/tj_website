@@ -1,7 +1,7 @@
 .books-container {
-  max-width: 1200px;
+  max-width: auto;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 10px 10px;
   color: #f3f4f6;
   background: linear-gradient(135deg, #051330 0%, #0B2D6B 50%, #152238 100%);
   background-attachment: fixed;
@@ -45,18 +45,17 @@
 }
 
 .book-card {
-  /* Lighter blue card background with red borders */
   background: linear-gradient(145deg, rgba(16, 54, 122, 0.85) 0%, rgba(24, 68, 148, 0.9) 100%);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  border: 2px solid #E41E26;
+  border: 5px solid #E41E26;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: row;
-  min-height: 260px;
+  min-height: 20px;
 }
 
   .book-card:hover {
@@ -68,7 +67,7 @@
 .book-image {
   width: 35%;
   min-width: 220px;
-  height: 350px;
+  height: 400px;
   background: rgba(5, 19, 48, 0.5);
   display: flex;
   align-items: center;
@@ -95,11 +94,11 @@
   flex-direction: column;
   justify-content: flex-start;
   overflow-y: auto;
-  max-height: 350px;
+  max-height: 400px;
 }
 
   .book-info h3 {
-    font-size: 1.3rem; /* Reduced size */
+    font-size: 1.3rem;
     background: linear-gradient(90deg, #E41E26 0%, #ff8589 50%, #ffffff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -110,10 +109,10 @@
 
   .book-info p {
     margin: 6px 0;
-    font-size: 0.85rem; /* Smaller text size to accommodate long synopsis */
+    font-size: 0.85rem;
     line-height: 1.4;
     color: #e2e8f0;
-    white-space: pre-line; /* FIXED: Applied globally so \n\n renders as paragraphs */
+    white-space: pre-line;
   }
 
 .publisher {
@@ -133,6 +132,44 @@
   font-size: 0.75rem;
   font-family: monospace;
 }
+
+/* Purchase Button Styles */
+.buy-action {
+  margin-top: 12px;
+}
+
+.modal-buy-action {
+  margin-top: 25px;
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #E41E26 0%, #b8141b 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(228, 30, 38, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+  .buy-btn:hover {
+    background: linear-gradient(135deg, #ff3b43 0%, #E41E26 100%);
+    box-shadow: 0 6px 16px rgba(228, 30, 38, 0.5), 0 0 10px rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    color: #ffffff;
+  }
+
+  .buy-btn.modal-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
 
 /* Modal Styles */
 .modal-overlay {
@@ -203,17 +240,13 @@
   }
 
 .modal-details h2 {
-  font-size: 1.7rem; /* Adjusted for cleaner scaling */
+  font-size: 1.7rem;
   background: linear-gradient(90deg, #E41E26 0%, #ff8589 50%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin: 0 0 20px 0;
   font-weight: 700;
   line-height: 1.3;
-}
-
-.modal-details p {
-  white-space: pre-line; /* FIXED: Ensures modal synopsis paragraphs respect \n\n too */
 }
 
 .book-metadata {

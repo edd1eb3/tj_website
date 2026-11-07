@@ -16,23 +16,33 @@
         <p class="synopsis">{{ book.synopsis }}</p>
         <p class="isbn10">ISBN-10: {{ book.isbn10 }}</p>
         <p class="isbn13">ISBN-13: {{ book.isbn13 }}</p>
+
+        <div *ngIf="book.purchaseLink" class="buy-action">
+          <a [href]="book.purchaseLink"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="buy-btn"
+             (click)="$event.stopPropagation()">
+            Buy on Amazon
+          </a>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Book Details Modal -->
+  <!-- Book Details Modal (Synopsis omitted) -->
   <div class="modal-overlay" *ngIf="selectedBook" (click)="closeDetails()">
     <div class="modal-content" (click)="$event.stopPropagation()">
       <button class="close-btn" (click)="closeDetails()">✕</button>
-      
+
       <div class="modal-body">
         <div class="modal-image">
           <img [src]="selectedBook.image" [alt]="selectedBook.title" />
         </div>
-        
+
         <div class="modal-details">
           <h2>{{ selectedBook.title }}</h2>
-          
+
           <div class="book-metadata">
             <div class="metadata-item">
               <strong>Publisher:</strong>
@@ -50,6 +60,15 @@
               <strong>ISBN-13:</strong>
               <span>{{ selectedBook.isbn13 }}</span>
             </div>
+          </div>
+
+          <div *ngIf="selectedBook.purchaseLink" class="modal-buy-action">
+            <a [href]="selectedBook.purchaseLink"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="buy-btn modal-btn">
+              Buy on Amazon
+            </a>
           </div>
         </div>
       </div>
