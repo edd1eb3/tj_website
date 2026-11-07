@@ -14,7 +14,7 @@
   .television-container h1 {
     text-align: center;
     margin: 15px 0;
-    padding: 0 20px;
+    padding: 0 10px;
     font-size: 2.5rem;
     flex-shrink: 0;
     /* Blue, white, and red gradient for main title */
@@ -47,7 +47,7 @@
 .video-content {
   display: flex;
   gap: 20px;
-  padding: 19px;
+  padding: 1px;
   flex: 1;
   overflow: hidden;
   min-height: 0;
