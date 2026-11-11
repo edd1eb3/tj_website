@@ -50,3 +50,27 @@ body {
 main {
   padding: 40px;
 }
+
+/* Entire page scrollbar */
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 18px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: #051330;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient( to bottom, #E41E26 0%, #ffffff 50%, #0B2D6B 100% );
+  border-radius: 20px;
+  border: 2px solid #051330;
+}
+
+  html::-webkit-scrollbar-thumb:hover,
+  body::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient( to bottom, #ff4d4d 0%, #ffffff 50%, #2d5eff 100% );
+  }
